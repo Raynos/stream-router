@@ -1,0 +1,32 @@
+{
+  "name": "stream-router",
+  "version": "0.0.1",
+  "description": "Easy router for routing streams",
+  "keywords": [],
+  "author": "Raynos <raynos2@gmail.com>",
+  "repository": "git://github.com/Raynos/stream-router.git",
+  "main": "index",
+  "homepage": "https://github.com/Raynos/stream-router",
+  "contributors": [
+    {
+      "name": "Jake Verbaten"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/Raynos/stream-router/issues",
+    "email": "raynos2@gmail.com"
+  },
+  "dependencies": {
+    "routes": "~0.1.1"
+  },
+  "devDependencies": {
+    "mux-demux": "~2.1.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/Raynos/stream-router/raw/master/LICENSE"
+    }
+  ],
+  "scripts": {}
+}
