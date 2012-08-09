@@ -1,4 +1,4 @@
-# stream-router [![build status][1]][2]
+# stream-router
 
 Easy router for routing streams
 
