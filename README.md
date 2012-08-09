@@ -34,12 +34,14 @@ function handleFoo(stream, params) {
 ## Example client
 
 ``` js
-var MuxDemux = require("mix-demux")
+var MuxDemux = require("mux-demux")
     , net = require("net")
     , mdm = MuxDemux({
         error: false
     })
     , con = net.connect(8642)
+
+con.pipe(mdm).pipe(con)
 
 var foo = mdm.createStream("/foo/bar")
 
