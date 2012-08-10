@@ -2,7 +2,8 @@ var Router = require("routes").Router
 
 module.exports = StreamRouter
 
-function StreamRouter() {
+function StreamRouter(errorHandler) {
+    errorHandler = errorHandler || log
     var router = new Router()
 
     streamHandler.addRoute = router.addRoute.bind(router)
@@ -12,9 +13,16 @@ function StreamRouter() {
 
     function streamHandler(stream) {
         var route = router.match(stream.meta)
+
+        stream.on("error", errorHandler)
+
         if (!route) {
             return stream.end()
         }
         route.fn(stream, route.params)
     }
+}
+
+function log(error) {
+    console.log("[ERROR IN STREAM-ROUTER]", error)
 }
