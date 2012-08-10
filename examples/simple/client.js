@@ -1,11 +1,6 @@
-var MuxDemux = require("mux-demux")
+var MuxDemux = require("mux-demux-net")
     , net = require("net")
-    , mdm = MuxDemux({
-        error: false
-    })
-    , con = net.connect(8642)
-
-con.pipe(mdm).pipe(con)
+    , mdm = MuxDemux(8642)
 
 var foo = mdm.createStream("/foo/bar")
 

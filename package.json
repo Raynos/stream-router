@@ -20,7 +20,7 @@
     "routes": "~0.1.1"
   },
   "devDependencies": {
-    "mux-demux": "~2.1.0"
+    "mux-demux-net": "0.0.1"
   },
   "licenses": [
     {
