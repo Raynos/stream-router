@@ -17,6 +17,7 @@ function StreamRouter(errorHandler) {
         stream.on("error", errorHandler)
 
         if (!route) {
+            stream.error("404: invalid route: " + stream.meta)
             return stream.end()
         }
         route.fn(stream, route.params)
